@@ -46,7 +46,7 @@ class BotsPage extends Component {
     let newArmy = this.state.botArmy.filter(card => card !== bot)
 
     this.setState({ botCollection: newCollection, filteredCollection: newFilteredCollection, botArmy: newArmy })
-
+// fetching
     fetch(`https://json-server-vercel2-fttjs0ch8-benjah7.vercel.app/bots/${bot.id}`, {
       method: 'DELETE'
     }).then(response => response.json())
